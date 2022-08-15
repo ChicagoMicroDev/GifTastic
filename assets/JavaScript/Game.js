@@ -38,8 +38,9 @@ function populateGIFContainer(show){
         method: "GET"
     }).then(function(response){
         response.data.forEach(function(element){
+            console.log(response);
             newDiv = $("<div>");
-            newDiv.addClass("individual-gif-container");
+            newDiv.addClass("col col-md-4 p-4");
             newDiv.append("<p>Rating: " + element.rating.toUpperCase() + "</p>");
             var newImage = $("<img src = '" + element.images.fixed_height_still.url + "'>");
             newImage.addClass("gif-image");
